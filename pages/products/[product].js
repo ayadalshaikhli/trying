@@ -17,7 +17,6 @@ export default function ProductPage({ product }) {
 
 export async function getStaticPaths() {
   const products = await recursiveCatalog()
-
   const paths = products.map(item => {
     const product = String(item.node.handle)
 
